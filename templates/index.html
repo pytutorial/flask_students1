@@ -1,0 +1,16 @@
+{% if students %}
+    <table border="1">
+        <tr>
+            <th>STT</th>
+            <th>Mã học sinh</th>
+            <th>Họ và tên</th>
+        </tr>
+        {% for st in students %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ st.studentNo }}</td>
+                <td>{{ st.studentName }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endif %}
